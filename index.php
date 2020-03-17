@@ -10,7 +10,7 @@ $categorias[] = 'idoso';
 //var_dump($categorias);
 
 $nome = 'Marcello';
-$idade = 10;
+$idade = 8;
 
 //var_dump($nome);
 //var_dump($idade);
@@ -18,14 +18,24 @@ $idade = 10;
 
 if($idade >=  6 && $idade <= 12){
         //echo 'infantil';
-    for($i = 0; $i <= count($categorias); $i++){
-        if($categorias[1] == 'infantil')
-            echo 'O nadador '.$nome. 'compete na categoria infantil';
+    for($i = 0; $i <= count($categorias); $i++)
+    {
+        if($categorias[$i] == 'infantil')
+            echo 'O nadador '.$nome. ' compete na categoria '. $categorias[$i];
     }
 }
 else if($idade >=13 && $idade <= 18){
-        echo 'adolecente';
+
+         //echo 'adolecente';
+    for($i = 0; $i <= count($categorias); $i++){
+        if($categorias[$i] == 'adolecente')
+            echo 'O nadador '.$nome. ' compete na categoria adolecente '. $categorias[$i];
+    }
 }
 else {
-        echo 'adulto';
+        //echo 'adulto';
+    for($i = 0; $i <= count($categorias); $i++){
+        if($categorias[$i] == 'adulto')
+            echo 'O nadador '.$nome. ' compete na categoria adulto '. $categorias[$i];
+    }
 }
