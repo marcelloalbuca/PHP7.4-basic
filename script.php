@@ -9,8 +9,8 @@ $categorias[] = 'idoso';
 //print_r($categorias);
 //var_dump($categorias);
 
-$nome = 'Marcello';
-$idade = 8;
+$nome = $_POST['nome'];
+$idade = $_POST['idade'];
 
 //var_dump($nome);
 //var_dump($idade);
