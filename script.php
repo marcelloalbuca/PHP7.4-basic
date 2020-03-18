@@ -15,6 +15,19 @@ $idade = $_POST['idade'];
 //var_dump($nome);
 //var_dump($idade);
 
+if(empty($nome)){
+    echo " O nome não pode ser vázio";
+    return;
+}
+if(strlen($nome) <= 3){
+    echo " O nome deve conter mai de 3 caracteres";
+    return;
+}
+if(strlen($nome) > 40){
+    echo "Vocẽ passou o limite de caracteres";
+    return;
+}
+
 
 if($idade >=  6 && $idade <= 12){
         //echo 'infantil';
