@@ -29,13 +29,13 @@ else if($idade >=13 && $idade <= 18){
          //echo 'adolecente';
     for($i = 0; $i <= count($categorias); $i++){
         if($categorias[$i] == 'adolecente')
-            echo 'O nadador '.$nome. ' compete na categoria adolecente '. $categorias[$i];
+            echo 'O nadador '.$nome. ' compete na categoria adolecente ';
     }
 }
 else {
         //echo 'adulto';
     for($i = 0; $i <= count($categorias); $i++){
         if($categorias[$i] == 'adulto')
-            echo 'O nadador '.$nome. ' compete na categoria adulto '. $categorias[$i];
+            echo 'O nadador '.$nome. ' compete na categoria adulto ';
     }
 }
