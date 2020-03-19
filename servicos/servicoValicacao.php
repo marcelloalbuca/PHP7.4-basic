@@ -1,11 +1,10 @@
 <?php
 
 
-
 function validaNome(string $nome) : bool {
 
     if(empty($nome)){
-        setarMensagemErro($mensagem= 'O nome não pode ser vázio. Preencha o formulário.');
+        setarMensagemErro( mensagem: 'O nome não pode ser vázio. Preencha o formulário.');
         return false;
     }
     else if(strlen($nome) <= 3){
