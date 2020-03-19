@@ -1,7 +1,7 @@
 <?php
 
 
-function defineCatCompetidor(string $nome, string $idade){
+function defineCatCompetidor(string $nome, string $idade) : ?string {
 
 $categorias = [];
 $categorias[] = 'infantil';
@@ -12,6 +12,10 @@ $categorias[] = 'idoso';
 //print_r($categorias);
 //var_dump($categorias);
 
+if(validaNome($nome) && validaIdade($idade))
+{
+
+    removerMensagemErro();
 
 if($idade >=  6 && $idade <= 12){
         //echo 'infantil';
@@ -19,8 +23,8 @@ if($idade >=  6 && $idade <= 12){
     {
         if($categorias[$i] == 'infantil')
         {
-         setarMensagemErro($mensagem = 'O nadador '.$nome. ' compete na categoria '. $categorias[$i]);
-            return;
+         setarMensagemErro('O nadador '.$nome. ' compete na categoria '. $categorias[$i]);
+            return null;
         }            
     }
 }
@@ -30,8 +34,8 @@ else if($idade >=13 && $idade <= 18){
     for($i = 0; $i <= count($categorias); $i++){
         if($categorias[$i] == 'adolecente')
         {
-            setarMensagemErro($mensagem =  'O nadador '.$nome. ' compete na categoria adolecente ');     
-            return;
+            setarMensagemErro('O nadador '.$nome. ' compete na categoria adolecente ');     
+            return null;
         }
     }
 }
@@ -40,10 +44,15 @@ else {
     for($i = 0; $i <= count($categorias); $i++){
         if($categorias[$i] == 'adulto')
         {
-            setarMensagemErro($mensagem = 'O nadador '.$nome. ' compete na categoria adulto ');
-            return;
+            setarMensagemErro('O nadador '.$nome. ' compete na categoria adulto ');
+            return null;
+          }
         }
     }
 }
-
+    else
+    {
+    removerMensagemSucesso();
+    return obterMensagemErro();
+    }
 }
