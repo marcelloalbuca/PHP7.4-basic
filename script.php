@@ -17,30 +17,6 @@ $idade = $_POST['idade'];
 //var_dump($nome);
 //var_dump($idade);
 
-if(empty($nome)){
-
-    //echo " O nome não pode ser vázio";
-    //return;
-    $_SESSION['mensagem de erro'] = 'O nome não pode ser vázio. Preencha o formulário.';
-    header('location: index.php');
-    return;
-}
-else if(strlen($nome) <= 3){
-    $_SESSION['mensagem de erro'] = 'O nome não pode conter menos de 3 caracteres.';
-    header('location: index.php');
-    return;
-}
-else if(strlen($nome) > 40){
-    $_SESSION['mensagem de erro'] = 'O nome não pode conter mais de 40 caracteres.';
-    header('location: index.php');
-    return;
-}
-
-else if(!is_numeric($idade)){
-    $_SESSION['mensagem de erro'] = 'Informe um número.';
-    header('location: index.php');
-    return;
-}
 
 if($idade >=  6 && $idade <= 12){
         //echo 'infantil';
