@@ -1,17 +1,19 @@
 <?php
 
+
+
 function validaNome(string $nome) : bool {
 
     if(empty($nome)){
-        $_SESSION['mensagem de erro'] = 'O nome não pode ser vázio. Preencha o formulário.';
+        setarMensagemErro($mensagem= 'O nome não pode ser vázio. Preencha o formulário.');
         return false;
     }
     else if(strlen($nome) <= 3){
-        $_SESSION['mensagem de erro'] = 'O nome não pode conter menos de 3 caracteres.';
+        setarMensagemErro($mensagem = 'O nome não pode conter menos de 3 caracteres.');
         return false;
     }
     else if(strlen($nome) > 40){
-        $_SESSION['mensagem de erro'] = 'O nome não pode conter mais de 40 caracteres.';
+        setarMensagemErro($mensagem = 'O nome não pode conter mais de 40 caracteres.');
         return false;
     }
     return true;
@@ -20,7 +22,7 @@ function validaNome(string $nome) : bool {
 function validaIdade(string $idade) : bool {
 
     if(!is_numeric($idade)){
-        $_SESSION['mensagem de erro'] = 'Informe um número.';
+        setarMensagemErro($mensagem = 'Informe um número.');
        //header('location: index.php');
         return false;
     }
@@ -33,5 +35,6 @@ function validaData(string $data){
     echo "Data inválida.";
     }
 }
+
 
 
