@@ -4,15 +4,15 @@
 function validaNome(string $nome) : bool {
 
     if(empty($nome)){
-        setarMensagemErro( mensagem: 'O nome não pode ser vázio. Preencha o formulário.');
+        setarMensagemErro('O nome não pode ser vázio. Preencha o formulário.');
         return false;
     }
     else if(strlen($nome) <= 3){
-        setarMensagemErro($mensagem = 'O nome não pode conter menos de 3 caracteres.');
+        setarMensagemErro('O nome não pode conter menos de 3 caracteres.');
         return false;
     }
     else if(strlen($nome) > 40){
-        setarMensagemErro($mensagem = 'O nome não pode conter mais de 40 caracteres.');
+        setarMensagemErro('O nome não pode conter mais de 40 caracteres.');
         return false;
     }
     return true;
@@ -21,7 +21,7 @@ function validaNome(string $nome) : bool {
 function validaIdade(string $idade) : bool {
 
     if(!is_numeric($idade)){
-        setarMensagemErro($mensagem = 'Informe um número.');
+        setarMensagemErro('Informe um número.');
        //header('location: index.php');
         return false;
     }
