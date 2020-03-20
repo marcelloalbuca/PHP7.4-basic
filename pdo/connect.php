@@ -7,7 +7,7 @@ try{
     $pdo = new PDO('mysql:host=localhost;dbname=exemplo', 'root', 'root');
 } catch (Exception $e) {
     echo $e->getMessage();
-    //die();
+    die();
 }
 //var_dump($pdo);
 return $pdo;
